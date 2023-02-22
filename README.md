@@ -13,6 +13,74 @@
 ![Twitter Follow](https://img.shields.io/twitter/follow/kembec?style=social)
 
 I'm passionate about technology ever since I clicked my first mouse. I've studied Marketing and Graphic Design, and I've been Programming since 2009 when I wrote my first "Hello World" in PHP.
+## About me
+
+```php
+<?php
+
+class AboutMe
+{
+  private $data = [
+    "birth" => [
+      "day"   => 4,
+      "month" => 4,
+      "year"  => 1996,
+    ],
+    "country"       => "Perú",
+    "first_name"    => "Manuel",
+    "last_name"     => "Benancio",
+  ];
+
+  public function getData()
+  {
+    $birth = $this->data["birth"];
+
+    return [
+      "age"               => date("Y") - $birth["year"] - (date("m") < $birth["month"] || (date("m") == $birth["month"] && date("d") < $birth["day"]) ? 1 : 0),
+      "full_name"         => $this->data["first_name"] . " " . $this->data["last_name"],
+      "country"           => $this->data["country"],
+      "username"          => "Kembec",
+      "website"           => "https://kembec.com",
+      "langs"             => [
+        [
+          "name"      => "spanish",
+          "native"    => TRUE,
+          "status"    => "Ok"
+        ],
+        [
+          "name"      => "english",
+          "native"    => FALSE,
+          "status"    => "In progress"
+        ],
+      ],
+      "development"       => [
+        "ide"           => "Visual Studio Code",
+        "docker"        => TRUE,
+        "favorites"     => [
+          "lang"              => "Typescript", // Yes, my favorite language is Typescript but this code is in PHP.
+          "db"                => "MariaDB",
+          "ui_design"         => "Figma",
+          "icons"             => "FontAwesome",
+          "js_runtime"        => "Node",
+          "package_manager"   => "Npm", //By habit, really, Yarn is better.
+          "frameworks"    => [
+            "js"    => "Vue.js",
+            "php"   => "Laravel",
+            "css"   => "Tailwind",
+            "SSR"   => "Next.js",
+          ]
+        ]
+      ],
+      "other_knowledge"       => ["marketing", "graphic design"],
+      "other_passions"        => ["music", "photography"],
+      "available_for_travel"  => TRUE,
+    ];
+  }
+}
+
+
+```
+
 
 ## Follow me on
 
