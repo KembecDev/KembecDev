@@ -1,0 +1,5 @@
+@media (prefers-color-scheme: dark) {
+  img[src$="header_dark.png"] {
+    content: url("/src/header_light.png");
+  }
+}
