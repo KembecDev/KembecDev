@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="/src/style.css">
-
-
 <p align="center" width="300">
   <a align="center" href="https://kembec.com" target="_blank">
-    <img align="center"  src="/src/avatar_dark.png" alt="Kembec.com" style="height: 15rem; width:auto;">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="/src/avatar_light.png">
+      <img alt="Kembec.com" src="/src/avatar_dark.png">
+    </picture>
   </a>
   
    <h3 align="center">Hi everyone, let's create something!</h3>
@@ -21,3 +21,10 @@ I'm passionate about technology ever since I clicked my first mouse. I've studie
 ![GitHub Followers](https://img.shields.io/github/followers/KembecDev?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/kembec?style=social)
 
+<style>
+  @media (prefers-color-scheme: dark) {
+    img[src$="avatar_dark.png"] {
+      content: url("/src/avatar_light.png");
+    }
+  }
+</style>
