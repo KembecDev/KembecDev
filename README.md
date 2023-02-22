@@ -33,11 +33,11 @@ class AboutMe
 
   public function getData()
   {
-    $birth  = $this->data["birth"];
-    $age    = date("Y") - $birth["year"] - (date("m") < $birth["month"] || (date("m") == $birth["month"] && date("d") < $birth["day"]) ? 1 : 0);
+    $birth        = $this->data["birth"];
+    $age_offset   = date("m") < $birth["month"] || (date("m") == $birth["month"] && date("d") < $birth["day"]) ? 1 : 0;
 
     return [
-      "age"               => $age,
+      "age"               => date("Y") - $birth["year"] - $age_offset,
       "full_name"         => $this->data["first_name"] . " " . $this->data["last_name"],
       "country"           => $this->data["country"],
       "username"          => "Kembec",
