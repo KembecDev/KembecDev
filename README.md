@@ -33,10 +33,11 @@ class AboutMe
 
   public function getData()
   {
-    $birth = $this->data["birth"];
+    $birth  = $this->data["birth"];
+    $age    = date("Y") - $birth["year"] - (date("m") < $birth["month"] || (date("m") == $birth["month"] && date("d") < $birth["day"]) ? 1 : 0);
 
     return [
-      "age"               => date("Y") - $birth["year"] - (date("m") < $birth["month"] || (date("m") == $birth["month"] && date("d") < $birth["day"]) ? 1 : 0),
+      "age"               => $age,
       "full_name"         => $this->data["first_name"] . " " . $this->data["last_name"],
       "country"           => $this->data["country"],
       "username"          => "Kembec",
@@ -67,18 +68,16 @@ class AboutMe
             "js"    => "Vue.js",
             "php"   => "Laravel",
             "css"   => "Tailwind",
-            "SSR"   => "Next.js",
+            "ssr"   => "Next.js",
           ]
         ]
       ],
-      "other_knowledge"       => ["marketing", "graphic design"],
-      "other_passions"        => ["music", "photography"],
+      "other_knowledge"       => ["Marketing", "Graphic Design"],
+      "other_passions"        => ["Music", "Photography"],
       "available_for_travel"  => TRUE,
     ];
   }
 }
-
-
 ```
 
 
