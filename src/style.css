@@ -1,8 +1,0 @@
-@media (prefers-color-scheme: dark) {
-  img[src$="header_dark.png"] {
-    content: url("/src/header_light.png");
-  }
-  img[src$="avatar_dark.png"] {
-    content: url("/src/avatar_light.png");
-  }
-}
